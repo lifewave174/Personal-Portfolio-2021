@@ -1,0 +1,27 @@
+// This is where you can import other stylesheets or write your scss code
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+* {
+    font-family: monospace;
+    background: #fefaf6;
+}
+
+.navbar-brand {
+    font-family:  'Caveat', cursive;
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    font-size: 1rem;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+}
+
+.heroicon {
+    width: 15rem;
+}
