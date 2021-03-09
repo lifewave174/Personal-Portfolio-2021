@@ -12,6 +12,19 @@
     font-size: 1.5rem;
     width: 100%;
   }
+
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    left: 2.8;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s forwards 0s;
+  }
 }
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -9986,24 +9999,33 @@ header {
 
 .navbar-nav {
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-link {
   color: black !important;
   position: relative;
+  text-align: center;
+}
+
+.nav-item {
+  width: fit-content !important;
 }
 
 .nav-link::before {
   content: "";
   position: absolute;
-  width: 80%;
+  width: 100%;
   height: 2px;
   bottom: 0;
-  left: 2.8;
+  left: 0;
   background-color: #000;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s forwards 0s;
+  text-align: center;
 }
 
 .nav-link:hover::before {
