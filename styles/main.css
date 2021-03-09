@@ -10141,7 +10141,7 @@ main {
   left: 0;
   right: 0;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding-top: 18px;
 }
 
@@ -10155,7 +10155,6 @@ main {
 
 .scrolldownicon p {
   width: fit-content;
-  font-family: "Bebas Neue", cursive;
   margin-bottom: 2px;
 }
 
