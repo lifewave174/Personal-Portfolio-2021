@@ -1,27 +1,338 @@
+@use 'variables' as var;
+@use 'mixins' as mix;
+@forward 'media';
+
+
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+
+
 * {
     font-family: monospace;
-    background: #fefaf6;
+    background: var.$color-light;
+    color: var.$color-dark;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+.skills, .projects, .hero {
+    height: 77.5vh;
+
+}
+
+.contactme, .moreaboutme, .projects {
+    height: fit-content;
+    padding: 20px 0;
+}
+
+
+
+// navigation
+
+.navigation {
+    position: relative;
+    width: 100%;
+}
+
+header{
+    background-color: var.$color-light;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+
 .navbar-brand {
-    font-family:  'Caveat', cursive;
-    font-size: 1.5rem;
+    font-family:  var.$fontlogoandmore !important;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    font-style: italic;    
+    color: #000000 !important;
 }
 
 .navbar-nav {
     font-size: 1rem;
 }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 65vh;
+.nav-link {
+    color: black !important;
+}
+
+.nav-link:hover, .nav-link:active, .navbar-brand:hover{
+    color: rgb(117, 2, 2) !important;
+}
+
+// hero image and animated text
+
+main {
+    padding-top: 80px;
 }
 
 .heroicon {
     width: 15rem;
+}
+
+.herotext {
+    width: 100%;
+    @include mix.flex-center;
+    flex-direction: column;
+}
+
+.herotext p:nth-child(1) {
+    @include mix.animation-typewriter(1.8s, 0s, 14, none);
+    // width: 25%;
+    width: 66%;
+    text-align: center;
+}
+
+.herotext p:nth-child(2) {
+    @include mix.animation-typewriter(3.21s, 1.8s, 25, none);
+    opacity: 0;
+    text-align: center;
+    width: 99%;
+}
+
+.herotext p:nth-child(3) {
+    @include mix.animation-typewriter(2.05s, 5.01s, 16, none);
+    opacity: 0;
+    text-align: center;
+    width: 67%;
+}
+
+// scroll down icon and animation
+
+.scrolldown {
+    @include mix.flex-center;
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: var.$scrolldownfsize;
+    padding-top: 18px;
+}
+
+.scrolldownicon{
+    @include mix.scrolldown;
+    width: fit-content;
+    z-index: 10;
+}
+
+.scrolldownicon p {
+    width: fit-content;
+    // text-transform: uppercase;
+    font-weight: bold;
+    font-family:  var.$fontlogoandmore;
+    margin-bottom: 2px;
+}
+
+
+// skills bars
+
+.skills {
+    max-width: 670px;
+}
+
+.skills h5 {
+    padding: 28px;
+}
+
+.skillbar {
+    width: 90%;
+    height: 23px;
+    position: relative;
+    margin: 20px auto;
+    transition: all 2s linear;
+    border: 2px solid black;
+}
+
+.textbar { 
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+
+
+.textbar span {
+    color: white;
+    background-color: transparent;
+    padding: 0px 10px;
+    
+}
+
+.html {
+    animation: html 3s forwards;
+    animation-delay: 4s;
+}
+
+.css3 {
+    animation: css 3s forwards;
+    animation-delay: 4s;
+}
+
+
+.bootstrap {
+    animation: bootstrap 3s forwards;
+    animation-delay: 4s;    
+}
+
+.javascript {
+    animation: javascript 3s forwards;
+    animation-delay: 4s;
+}
+
+@keyframes html {
+    from {width: 0%;}
+    to {width: 100%;  background-color: var.$color-dark;}
+}
+
+@keyframes css {
+    from {width: 0%;}
+    to {width: 95%;  background-color: var.$color-dark;}
+}
+
+@keyframes bootstrap {
+    from {width: 0%;}
+    to {width: 80%;  background-color: var.$color-dark;}
+}
+
+@keyframes javascript {
+    from {width: 0%;}
+    to {width: 50%;  background-color: var.$color-dark;}
+}
+
+// Projects section
+
+.projects {
+    width: 100%;
+}
+
+.projects, .projects * {
+   color: var.$color-light;
+   background-color: black;
+}
+
+
+.projects h5 {
+    padding: 28px;
+}
+
+.projectsingle {
+    padding: 6%;
+    border: 1px solid grey;
+    margin: 2%;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tags {
+    @include mix.flex-center;
+    font-weight: bold;
+}
+
+.tags p {
+    padding: 0px 10px;
+}
+
+.projectheading {
+    padding: 30px 0px 0px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+// More about me section
+
+
+.fullcard {
+    padding: 30px 0px;
+    @include mix.flex-center;
+    background-color: #f8f1e9;
+}
+
+.fullcard * {
+   background-color: #f8f1e9;
+}
+
+.imageofmediv {
+    @include mix.flex-center;
+}
+
+.imageofme {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.moreaboutme h5 {
+    padding: 2rem 0;
+}
+
+.hobbiesicons {
+    @include mix.flex-center;
+}
+
+.hobbiesiconsmall {
+    width: 18%;
+    max-width: 3.5rem;
+    padding: 0px 5px;
+}
+
+
+// contact me section
+
+.form {
+    width: 100%;
+    padding: 5%;
+    max-width: 700px;
+}
+
+.form div {
+    padding: 15px;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+.button {
+    width: 200px;
+    margin: auto;
+}
+
+form button {
+    width: 100%;
+    background-color: var.$color-dark;
+    color: var.$color-light;
+    margin: auto;
+}
+
+form button:hover {
+    background-color: black; 
+}
+
+// footer
+
+footer {
+    padding: 15px 0px;
+    background-color: var.$color-dark ;
+}
+
+footer *{
+    background-color: var.$color-dark ;
+    color:var.$color-light;
+}
+
+.socials div {
+    padding: 0px 8px;
+}
+
+footer p {
+    padding: 0px;
+    margin-bottom: 10px;
 }

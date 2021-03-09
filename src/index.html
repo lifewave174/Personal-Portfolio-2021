@@ -10,17 +10,20 @@
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Oswald&family=Raleway&display=swap" rel="stylesheet">
-    
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Oswald&family=Raleway&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c94cca6878.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+  <section class="navigation">
 
   <header>
 
     <!-- navbar with bootstrap -->
 
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light">
+    <nav class=" navbar sticky-top  navbar-expand-lg navbar-light border-bottom">
       <div class="container-fluid">
         <a class="navbar-brand ml-2 " href="#">Priya Mirani</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -31,31 +34,344 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0 mr-2 text-center pt-2">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Skills</a>
+              <a class="nav-link" aria-current="page" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Projects</a>
+              <a class="nav-link " aria-current="page" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About Me</a>
+              <a class="nav-link" aria-current="page" href="#moreaboutme">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              <a class="nav-link" aria-current="page" href="#contactme">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+</section>
 
-  <!-- hero image -->
 
-  <section class="hero container-fluid">
-    <div class="heroicon">
-      <img src="../src/images/noun_girl_599361.svg" alt="">
+  <main>
+
+    <!-- hero image with text -->
+
+    <div class="herosection">
+      <section class="hero container-fluid d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div class="heroicon">
+            <img src="../src/images/noun_girl_599361.svg" alt="">
+          </div>
+          <div class="herotext">
+            <p >Hi, I am Priya.</p>
+            <p>A web developer based in </p>
+            <p >Berlin, Germany. </p>
+          </div>
+        </div>
+
+      </section>
+      <div class="scrolldown">
+        <a href="#skills">
+          <div class="scrolldownicon">
+            <p>Skills</p>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </a>
+      </div>
     </div>
-    
-  </section>
+
+    <hr>
+
+    <!-- skills section -->
+
+    <div class="pb-5">
+      <section class="skills container-fluid d-flex flex-column justify-content-center" id="skills">
+        <div>
+          <h5 class="text-center"> Skills</h5>
+
+          <div class="skillbar">
+            <div class="html textbar">
+              <span class="skillarea ">
+                HTML
+              </span>
+              <span class="percentage">
+                100%
+              </span>
+            </div>
+          </div>
+
+          <div class="skillbar">
+            <div class="css3 textbar">
+              <span class="skillarea">
+                CSS3
+              </span>
+              <span class="percentage">
+                95%
+              </span>
+            </div>
+          </div>
+
+          <div class="skillbar">
+            <div class="bootstrap textbar">
+              <span class="skillarea">
+                Bootstrap
+              </span>
+              <span class="percentage">
+                80%
+              </span>
+            </div>
+          </div>
+
+          <div class="skillbar">
+            <div class="javascript textbar">
+              <span class="skillarea">
+                Javascript
+              </span>
+              <span class="percentage">
+                50%
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <div class="scrolldown">
+        <a href="#projects">
+          <div class="scrolldownicon">
+            <p>Projects</p>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="projects pb-5 d-flex  flex-column justify-content-center align-items-center" >
+      <section class="container-fluid d-flex flex-column justify-content-center align-items-center"
+        id="projects">
+        <h5 class="text-center"> Projects</h5>
+        <div class="d-flex flex-column flex-md-row flex-lg-row justify-content-center align-items-center ">
+
+          <div class="projectsingle">
+            <div class="projectimg">
+              <img src="../src/images/port4.jpeg" alt="" class="w-100">
+            </div>
+            <div class="projecttext">
+              <p class="projectheading">Getting Deeper</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt mollitia, voluptatum
+              dolorem repellat nemo? Voluptates minus odit adipisci rem dolores recusandae facere quo excepturi! Eaque
+              saepe ducimus fugit ipsum!</p>
+            <div class="tags">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>Bootstrap</p>
+              <p>Sass</p>
+            </div>
+            </div>            
+          </div>
+          <div class="projectsingle">
+            <div class="projectimg">
+              <img src="../src/images/port1.jpeg" alt="" class="w-100">
+            </div>
+            <div class="projecttext">
+              <p  class="projectheading">Responsive blog</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt mollitia, voluptatum
+              dolorem repellat nemo? Voluptates minus odit adipisci rem dolores recusandae facere quo excepturi! Eaque
+              saepe ducimus fugit ipsum!</p>
+            <div class="tags">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>Bootstrap</p>
+              <p>Sass</p>
+            </div>
+            </div>            
+          </div>
+          <div class="projectsingle">
+            <div class="projectimg">
+              <img src="../src/images/port2.jpeg" alt="" class="w-100">
+            </div>
+            <div class="projecttext">
+              <p  class="projectheading">NGA Application</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt mollitia, voluptatum
+              dolorem repellat nemo? Voluptates minus odit adipisci rem dolores recusandae facere quo excepturi! Eaque
+              saepe ducimus fugit ipsum!</p>
+            <div class="tags">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>Bootstrap</p>
+              <p>Sass</p>
+            </div>
+            </div>            
+          </div>
+        </div>
+
+          <!-- <div id="carouselExampleCaptions" class="carousel slide carousel-fade " data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../src/images/port1.jpeg" class="d-block w-100 w-md-75 w-lg-75" alt="...">
+                <div class="carousel-caption  d-md-block">
+                  <h5>Getting Deeper</h5>
+                  <p>HTML, CSS3, JavaScript.</p>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="../src/images/port2.jpeg" class="d-block w-100 w-md-75 w-lg-75 " alt="...">
+                <div class="carousel-caption d-md-block">
+                  <h5>Responsive Blog</h5>
+                  <p>Jquery, HTML, Css.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../src/images/port4.jpeg" class="d-block w-100 w-md-75 w-lg-75" alt="...">
+                <div class="carousel-caption  d-md-block">
+                  <h5>NGA Website</h5>
+                  <p>Bootstrap, Sass</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div> -->
+
+
+      </section>
+      <div class="scrolldown">
+        <a href="#moreaboutme">
+          <div class="scrolldownicon">
+            <p>More About Me</p>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+
+    <!-- moreaboutmesection -->
+
+    <div class=" p-5">
+
+      <section class="moreaboutme container-fluid d-flex flex-column justify-content-center" id="moreaboutme">
+        <h5 class="card-title text-center">More about me</h5>
+        <div class="d-flex justify-content-center align-items-center">
+
+          <div class="card mb-3 fullcard" style="max-width: 1000px;">
+            <div class="row g-0 w-100">
+              <div class="col-md-4 imageofmediv">
+                <img src="../src/images/me.jpg" alt="..." class="imageofme">
+              </div>
+              <div class="col-md-8 d-flex justify-content-center align-items-center">
+                <div class="card-body text-center">
+
+                  <p class="card-text">My name is Priya. I am a Web Developer based in Berlin, Germany. Apart from my
+                    love for
+                    programming, I also cook, read, curate music, write and go for long walks.</p>
+                  <div class="hobbiesicons">
+                    <div class="hobbiesiconsmall">
+                      <img src="../src/images/noun_cooking_2535497.svg" alt="">
+                    </div>
+                    <div class="hobbiesiconsmall">
+                      <img src="../src/images/noun_Reading_143183.svg" alt="">
+                    </div>
+                    <div class="hobbiesiconsmall">
+                      <img src="../src/images/noun_Music_3763667.svg" alt="">
+                    </div>
+                    <div class="hobbiesiconsmall">
+                      <img src="../src/images/noun_Writing_1267444.svg" alt="">
+                    </div>
+                    <div class="hobbiesiconsmall">
+                      <img src="../src/images/noun_Walking_798378.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="scrolldown">
+        <a href="#contactme">
+          <div class="scrolldownicon">
+            <p>Contact Me</p>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- contact me section -->
+    <section class="contactme container-fluid d-flex flex-column justify-content-center align-items-center"
+      id="contactme">
+      <h5 class="text-center">Let's Talk!</h5>
+      <div class="form">
+        <form action="">
+          <div>
+            <label for="yname" class="d-block">Your Name:</label>
+            <input type="text" id="yname" name="yname">
+          </div>
+          <div>
+            <label for="email" class="d-block">Your Email:</label>
+            <input type="text" id="email" name="email">
+          </div>
+          <div>
+            <label for="message" class="d-block">Your Message:</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          </div>
+          <div class="button">
+            <button type="button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+
+    <div>
+      <div class="d-flex justify-content-center">
+        <p>Find Me On:</p>
+      </div>
+      <div class="socials d-flex justify-content-center">
+
+        <a href="http://github.com" target="_blank" rel="noopener noreferrer"><div><i class="fab fa-github"></i></div>
+        </a>
+        
+         <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><div><i class="fab fa-linkedin"></i></div></a> 
+      </div>
+    </div>
+
+
+
+  </footer>
+
+
+
 
   <!-- Custom scripts, edit above this line -->
 
