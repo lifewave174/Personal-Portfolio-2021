@@ -11,6 +11,19 @@
     font-size: 1.5rem;
     width: 100%;
   }
+
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    left: 2.8;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s forwards 0s;
+  }
 }
 
 /*# sourceMappingURL=media.css.map */
